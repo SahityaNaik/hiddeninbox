@@ -1,7 +1,6 @@
 ## HiddenInbox – Anonymous Messaging Web App
 
-HiddenInbox is a full‑stack application inspired by anonymous feedback/mobile apps.  
-Users can sign up, share a public link, receive anonymous messages, and view simple stats on their dashboard.
+HiddenInbox is a full‑stack web application that lets users create a private handle, share it with others, and receive anonymous notes. It gives users complete control over their messages and profile.
 
 ### Tech Stack
 
@@ -120,8 +119,10 @@ Open that URL in your browser.
   - Copy your public profile link
   - Delete individual messages
 - **UI**
-  - Glassmorphism‑style UI
-  - Light/dark theme toggle persisted in `localStorage`
+  - **Premium Glassmorphism:** A modern, depth-focused interface using backdrop blurs and curated gradients.
+  - **Tailwind CSS:** Fully migrated and optimized for performance and consistency.
+  - **Mobile-First Responsive Layouts:** Optimized for all screen sizes with centered hero sections and stacked interactive elements.
+  - **Theme Support:** Native light/dark mode toggle persisted for user preference.
 
 ---
 
@@ -145,10 +146,3 @@ frontend/
     App.tsx        # Router setup
     index.css      # Theme and layout styles
 ```
-
----
-
-
- 
-
-
