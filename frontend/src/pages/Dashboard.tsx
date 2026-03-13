@@ -37,7 +37,8 @@ export default function Dashboard() {
       });
 
       if (res.status === 401) {
-        localStorage.clear();
+        localStorage.removeItem("token");
+        localStorage.removeItem("username");
         window.location.href = "/login";
         return;
       }
@@ -50,7 +51,8 @@ export default function Dashboard() {
       });
 
       if (statsRes.status === 401) {
-        localStorage.clear();
+        localStorage.removeItem("token");
+        localStorage.removeItem("username");
         window.location.href = "/login";
         return;
       }

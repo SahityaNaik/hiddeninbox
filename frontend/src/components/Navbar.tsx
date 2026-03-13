@@ -21,7 +21,8 @@ export default function Navbar() {
   }, [theme]);
 
   const handleLogout = () => {
-    localStorage.clear();
+    localStorage.removeItem("token");
+    localStorage.removeItem("username");
     window.location.href = "/login";
   };
 
