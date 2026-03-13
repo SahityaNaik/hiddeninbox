@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+:root {
+  /* Layout */
+  --app-max-width: 1120px;
+  --app-radius-lg: 24px;
+  --app-radius-md: 16px;
+  --app-radius-sm: 10px;
+  --app-gap-lg: 2rem;
+  --app-gap-md: 1.25rem;
+  --app-gap-sm: 0.75rem;
+  --app-transition-fast: 150ms ease-out;
+
+  /* Colors - Dark Glass (default) */
+  --color-bg: radial-gradient(
+    circle at top left,
+    #0f172a 0,
+    #020617 45%,
+    #020617 100%
+  );
+  --color-surface-glass: rgba(15, 23, 42, 0.75);
+  --color-surface-soft: rgba(15, 23, 42, 0.6);
+  --color-border-subtle: rgba(148, 163, 184, 0.35);
+  --color-border-strong: rgba(148, 163, 184, 0.6);
+
+  --color-primary: #4f46e5;
+  --color-primary-soft: rgba(79, 70, 229, 0.18);
+  --color-primary-strong: #6366f1;
+  --color-accent: #22c55e;
+
+  --color-text: #e5e7eb;
+  --color-text-soft: #9ca3af;
+  --color-text-muted: #6b7280;
+  --color-danger: #f97373;
+  --color-danger-soft: rgba(248, 113, 113, 0.18);
+  --color-success: #22c55e;
+  --color-success-soft: rgba(34, 197, 94, 0.16);
+
+  /* Shadows & Blur */
+  --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.6);
+  --shadow-subtle: 0 10px 25px rgba(15, 23, 42, 0.35);
+  --backdrop-strong: blur(26px);
+  --backdrop-soft: blur(18px);
+
+  /* Button Theming Overrides */
+  --btn-secondary-bg: radial-gradient(
+    circle at top left,
+    rgba(15, 23, 42, 0.7),
+    transparent 55%
+  );
+  --btn-secondary-border: rgba(203, 213, 225, 0.5);
+  --pill-link-bg: radial-gradient(
+      circle at top,
+      var(--color-primary-soft),
+      transparent 55%
+    ),
+    var(--color-surface-soft);
+}
+
+[data-theme="light"] {
+  --color-bg: radial-gradient(
+    circle at top left,
+    #eef2ff 0,
+    #e5e7eb 35%,
+    #f9fafb 100%
+  );
+  --color-surface-glass: rgba(255, 255, 255, 0.9);
+  --color-surface-soft: rgba(255, 255, 255, 0.95);
+  --color-border-subtle: rgba(148, 163, 184, 0.3);
+  --color-border-strong: rgba(148, 163, 184, 0.7);
+
+  --color-primary: #2563eb;
+  --color-primary-soft: rgba(37, 99, 235, 0.12);
+  --color-primary-strong: #1d4ed8;
+  --color-accent: #16a34a;
+
+  --color-text: #020617;
+  --color-text-soft: #4b5563;
+  --color-text-muted: #6b7280;
+  --color-danger: #dc2626;
+  --color-danger-soft: rgba(220, 38, 38, 0.12);
+  --color-success: #16a34a;
+  --color-success-soft: rgba(22, 163, 74, 0.12);
+
+  --shadow-soft: 0 20px 40px rgba(15, 23, 42, 0.12);
+  --shadow-subtle: 0 12px 30px rgba(15, 23, 42, 0.09);
+
+  /* Button Theming Overrides (Light Mode) */
+  --btn-secondary-bg: radial-gradient(
+      circle at top left,
+      rgba(148, 163, 184, 0.15),
+      transparent 55%
+    ),
+    rgba(255, 255, 255, 0.9);
+  --btn-secondary-border: rgba(148, 163, 184, 0.6);
+  --pill-link-bg: radial-gradient(
+      circle at top,
+      rgba(219, 234, 254, 0.7),
+      transparent 55%
+    ),
+    rgba(255, 255, 255, 0.95);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Segoe UI", sans-serif;
+  background: var(--color-bg);
+  background-attachment: fixed;
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: inherit;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 4vw, 3.25rem);
+}
+
+h2 {
+  font-size: clamp(1.8rem, 3vw, 2.25rem);
+}
+
+p {
+  color: var(--color-text-soft);
+}
+
+
+
